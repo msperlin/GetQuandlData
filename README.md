@@ -1,3 +1,5 @@
+## Introduction
+
 [Quandl](https://www.quandl.com/search) is one of the best platforms for finding and downloading financial and economic time series. The collection of free databases is comprehensive and I've used it intensively in my research and class material.
 
 But, a couple of things from the native package `Quandl` always bothered me:
@@ -26,7 +28,7 @@ devtools::install_github('msperlin/GetQuandlData')
 ```
 
 
-## Example 01 - Inflation in the US
+### Example 01 - Inflation in the US
 
 Let's download information about inflation in the US:
 
@@ -48,7 +50,7 @@ df <- get_Quandl_series(id_in = my_id,
 glimpse(df)
 ```
 
-## Example 02 - Inflation for many countries
+### Example 02 - Inflation for many countries
 
 Next, lets have a look into a more realistic case, where we need inflation data for several countries:
 
