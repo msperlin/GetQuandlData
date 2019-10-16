@@ -6,7 +6,7 @@ But, a couple of things from the native package `Quandl` always bothered me:
 
 - Multiple data is always returned in the wide (column oriented) format (why??);
 - No local caching of data;
-- No control for importing error and status;
+- No control for importing error and status.
 
 As you suspect, I decided to tackle the problem over the weekend. The result is package `GetQuandlData`. This is what it does differently:
 

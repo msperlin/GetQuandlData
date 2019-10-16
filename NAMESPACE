@@ -2,3 +2,5 @@
 
 export(get_Quandl_series)
 export(get_database_info)
+export(get_single_Quandl)
+export(json_to_tibble)

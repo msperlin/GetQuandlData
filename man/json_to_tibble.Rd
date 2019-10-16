@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{json_to_tibble}
 \alias{json_to_tibble}
-\title{Transforms and organize json output to tibble}
+\title{Transforms and organize json output to a tibble}
 \usage{
 json_to_tibble(l_in, id_in, name_in)
 }
@@ -17,7 +17,7 @@ json_to_tibble(l_in, id_in, name_in)
 A beautiful dataframe
 }
 \description{
-Transforms and organize json output to tibble
+Transforms and organize json output to a tibble
 }
 \examples{
 

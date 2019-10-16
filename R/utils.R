@@ -1,10 +1,12 @@
-#' Transforms and organize json output to tibble
+#' Transforms and organize json output to a tibble
 #'
 #' @param l_in Output of get_single_Quandl
 #' @param id_in Value of id
 #' @param name_in Name of id
 #'
 #' @return A beautiful dataframe
+#'
+#' @export
 #'
 #' @examples
 #'

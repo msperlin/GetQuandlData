@@ -123,6 +123,7 @@ get_Quandl_series <- function(id_in,
 #' @param name_in Name of series to fetch
 #'
 #' @return A single dataframe
+#' @export
 #'
 #' @examples
 #'
