@@ -156,7 +156,7 @@ get_single_Quandl <- function(id_in,
   }
 
   # build json url
-  json_link <- sprintf(paste0('https://www.quandl.com/api/v3/datasets/%s.json?',
+  json_link <- sprintf(paste0('https://data.nasdaq.com/api/v3/datasets/%s.json?',
                               'start_date=%s?end_date=%s?', # dates
                               'order=%s?', # order of data (from time)
                               'collapse=%s?', # collapse frequency
