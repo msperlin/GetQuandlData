@@ -157,10 +157,10 @@ get_single_Quandl <- function(id_in,
 
   # build json url
   json_link <- sprintf(paste0('https://data.nasdaq.com/api/v3/datasets/%s.json?',
-                              'start_date=%s?end_date=%s?', # dates
-                              'order=%s?', # order of data (from time)
-                              'collapse=%s?', # collapse frequency
-                              'transform=%s?',
+                              'start_date=%s&end_date=%s&', # dates
+                              'order=%s&', # order of data (from time)
+                              'collapse=%s&', # collapse frequency
+                              'transform=%s&',
                               'api_key=%s'),
                        id_in,
                        first_date,
