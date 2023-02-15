@@ -10,6 +10,8 @@ Imports: jsonlite, memoise,
          dplyr, purrr, 
          utils, readr,
          fs
+Depends:
+    R (>= 4.0.0)         
 License: GPL-2
 BugReports: https://github.com/msperlin/GetQuandlData/issues
 URL: https://github.com/msperlin/GetQuandlData/
