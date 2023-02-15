@@ -54,3 +54,16 @@ json_to_tibble <- function(l_in, id_in, name_in) {
 
 }
 
+#' Returns the default cache folder
+#'
+#' @return a path (temporary)
+#' @export
+#'
+#' @examples
+#' get_cache_folder()
+get_cache_folder <- function() {
+  this_cache <- fs::path_temp('getquandldata-cache')
+
+  return(this_cache)
+}
+

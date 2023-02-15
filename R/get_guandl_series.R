@@ -16,7 +16,7 @@
 #' @param collapse Frequency of time series: 'none' (default), 'daily', 'weekly', 'monthly', 'quarterly', 'annual'
 #' @param transform Quandl transformation: 'none', 'diff', 'rdiff', 'rdiff_from', 'cumul', 'normalize'.
 #' Details at <https://docs.quandl.com/docs/parameters-2>
-#' @param cache_folder Folder where to save memoise cache files
+#' @param cache_folder Folder where to save memoise cache files (temporary folder as default)
 #'
 #' @return A dataframe in the long format
 #' @export
@@ -24,7 +24,7 @@
 #' @examples
 #'
 #' api_key <- 'YOUR_API_KEY_HERE'
-#' id_in <- c('Inflation argentina' = 'RATEINF/INFLATION_ARG')
+#' id_in <- c('Inflation Canada' = 'RATEINF/INFLATION_CAN')
 #' \dontrun{
 #'  df <- get_Quandl_series(id_in = id_in, api_key = api_key)
 #'  }
@@ -36,12 +36,12 @@ get_Quandl_series <- function(id_in,
                               order = 'asc',
                               collapse = 'none',
                               transform = 'none',
-                              cache_folder = 'quandl_cache') {
+                              cache_folder = get_cache_folder()) {
 
   # check inputs
   if (is.null(api_key)) {
     stop(paste0('You need an api key for using get_Quandl_series.\n',
-                'Get yours at <https://www.quandl.com/sign-up-modal?defaultModal=showSignUp>.'))
+                'Get yours at <https://data.nasdaq.com/sign-up>.'))
   }
 
   len_id <- length(id_in)

@@ -1,3 +1,8 @@
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/msperlin/GetQuandlData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/msperlin/GetQuandlData/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 ## Introduction
 
 [Quandl](https://www.quandl.com/search) is one of the best platforms for finding and downloading financial and economic time series. The collection of free databases is comprehensive and I've used it intensively in my research and class material.
@@ -37,15 +42,14 @@ library(GetQuandlData)
 library(tidyverse)
 
 my_id <- c('Inflation USA' = 'RATEINF/INFLATION_USA')
-my_api <- readLines('~/Dropbox/.quandl_api.txt') # you need your own API (get it at https://www.quandl.com/sign-up-modal?defaultModal=showSignUp>)
+my_api <- "YOUR_API_KEY" # you need your own API (get it at https://www.quandl.com/sign-up-modal?defaultModal=showSignUp>)
 first_date <- '2000-01-01'
 last_date <- Sys.Date()
 
 df <- get_Quandl_series(id_in = my_id, 
                         api_key = my_api, 
                         first_date = first_date,
-                        last_date = last_date, 
-                        cache_folder = tempdir())
+                        last_date = last_date)
 
 glimpse(df)
 ```
@@ -61,7 +65,7 @@ library(GetQuandlData)
 library(tidyverse)
 
 db_id <- 'RATEINF'
-my_api <- readLines('~/Dropbox/.quandl_api.txt') # you need your own API
+my_api <- "YOUR_API_KEY" # you need your own API (get it at https://www.quandl.com/sign-up-modal?defaultModal=showSignUp>)
 
 df <- get_database_info(db_id, my_api)
 

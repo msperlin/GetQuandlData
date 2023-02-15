@@ -46,7 +46,6 @@ Let's download and plot information about inflation in the US:
 
 ```{r, eval=FALSE}
 library(GetQuandlData)
-library(tidyverse)
 
 my_id <- c('Inflation USA' = 'RATEINF/INFLATION_USA')
 my_api <- readLines('YOURAPIHERE') # you need your own API (get it at https://www.quandl.com/sign-up-modal?defaultModal=showSignUp>)
@@ -59,7 +58,7 @@ df <- get_Quandl_series(id_in = my_id,
                         last_date = last_date, 
                         cache_folder = tempdir())
 
-glimpse(df)
+dplyr::glimpse(df)
 ```
 
 As you can see, the data is in the long format. Let's plot it:

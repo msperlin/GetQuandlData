@@ -1,21 +1,26 @@
 Package: GetQuandlData
 Type: Package
 Title: Fast and Cached Import of Data from 'Quandl' Using the 'json API'
-Version: 0.1.0
+Version: 1.0.0
 Author: Marcelo S. Perlin
 Maintainer: Marcelo S. Perlin <marceloperlin@gmail.com>
 Description: Imports time series data from the 'Quandl' database <https://www.quandl.com>. The package uses the  'json api' at <https://www.quandl.com/tools/api>, local caching ('memoise' package) and the tidy format by default. 
    Also allows queries of databases, allowing the user to see which time series are available for each database id. In short, it is an alternative to package 'Quandl', with faster data importation in the tidy/long format.
-Imports: jsonlite, memoise, dplyr, purrr, utils, readr
+Imports: jsonlite, memoise, 
+         dplyr, purrr, 
+         utils, readr,
+         fs
 License: GPL-2
 BugReports: https://github.com/msperlin/GetQuandlData/issues
 URL: https://github.com/msperlin/GetQuandlData/
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
-Suggests: knitr,
+RoxygenNote: 7.2.3
+Suggests: 
+    knitr,
     rmarkdown,
-    testthat,
+    testthat (>= 3.0.0),
     ggplot2,
-    tidyverse
+    tibble
 VignetteBuilder: knitr
+Config/testthat/edition: 3
