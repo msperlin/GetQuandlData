@@ -35,7 +35,7 @@ register the time series. Example: id_in <- c('US GDP' = 'FRED/GDP')}
 \item{transform}{Quandl transformation: 'none', 'diff', 'rdiff', 'rdiff_from', 'cumul', 'normalize'.
 Details at <https://docs.quandl.com/docs/parameters-2>}
 
-\item{cache_folder}{Folder where to save memoise cache files}
+\item{cache_folder}{Folder where to save memoise cache files (temporary folder as default)}
 }
 \value{
 A dataframe in the long format

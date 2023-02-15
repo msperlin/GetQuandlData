@@ -39,7 +39,6 @@ Let's download information about inflation in the US:
 
 ```
 library(GetQuandlData)
-library(tidyverse)
 
 my_id <- c('Inflation USA' = 'RATEINF/INFLATION_USA')
 my_api <- "YOUR_API_KEY" # you need your own API (get it at https://www.quandl.com/sign-up-modal?defaultModal=showSignUp>)
@@ -62,7 +61,6 @@ First, we need to see what are the available datasets from database `RATEINF`:
 
 ```
 library(GetQuandlData)
-library(tidyverse)
 
 db_id <- 'RATEINF'
 my_api <- "YOUR_API_KEY" # you need your own API (get it at https://www.quandl.com/sign-up-modal?defaultModal=showSignUp>)

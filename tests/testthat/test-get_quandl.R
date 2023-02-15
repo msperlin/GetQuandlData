@@ -10,6 +10,9 @@ test_df <- function(df) {
 
 test_that("get_quandl", {
 
+  skip_if_offline()
+  skip_on_cran() # avoid api calls on CRAN
+
   api_key <- ''
   id_in <- c('Inflation Canada' = 'RATEINF/INFLATION_CAN')
 

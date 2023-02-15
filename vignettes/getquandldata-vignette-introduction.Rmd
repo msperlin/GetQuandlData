@@ -85,7 +85,6 @@ First, we need to see what are the available datasets from database `RATEINF`:
 
 ```{r, message=TRUE, eval=FALSE}
 library(GetQuandlData)
-library(tidyverse)
 
 db_id <- 'RATEINF'
 my_api <- readLines('YOURAPIHERE') # you need your own API

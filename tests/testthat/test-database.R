@@ -10,6 +10,9 @@ test_df <- function(df) {
 
 test_that("database functions", {
 
+  skip_if_offline()
+  skip_on_cran() # avoid api calls on CRAN
+
   db_in <- 'RATEINF'
   api_key <- ''
 

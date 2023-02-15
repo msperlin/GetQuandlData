@@ -1,10 +1,3 @@
-test_that("cache works?", {
-
-  this_cache <- get_cache_folder()
-  expect_true(is.character(this_cache))
-
-})
-
 test_df <- function(df) {
 
   expect_true(tibble::is_tibble(df))
@@ -15,7 +8,19 @@ test_df <- function(df) {
 
 }
 
+
+test_that("cache works?", {
+
+  this_cache <- get_cache_folder()
+  expect_true(is.character(this_cache))
+
+})
+
+
 test_that("json_to_tibble()", {
+
+  skip_if_offline()
+  skip_on_cran() # avoid api calls on CRAN
 
   my_id <- 'BCB/7832'
   my_api <- ''
